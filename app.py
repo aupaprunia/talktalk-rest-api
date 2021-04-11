@@ -57,7 +57,7 @@ def speaker(choice):
         flag = False
 
     
-    db.child("Online").child("Listener").child(choice_dict[choice]).child(uid).child("status").set("1")
+    db.child("Online").child("Listener").child(choice_dict[choice]).child(uid).child("status").set(userId)
     db.child("Users").child(userId).child("token").set(token-1)
     
     url = "https://fcm.googleapis.com/fcm/send"
